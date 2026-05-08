@@ -47,25 +47,32 @@ body::before {
   align-items: center;
   padding: 1.5rem 5%;
   z-index: 100;
-  /* Fully visible granite texture with just a very light dark overlay for readability */
-  background-image: linear-gradient(rgba(20, 10, 8, 0.45), rgba(20, 10, 8, 0.45)), url('/rajasthan_heritage.png');
-  background-size: cover;
-  background-position: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  background: rgba(252, 246, 235, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(44, 27, 24, 0.1);
+  box-shadow: 0 4px 20px rgba(58, 39, 35, 0.05);
 }
 
 .logo {
   font-family: var(--font-heading);
   font-size: 1.5rem;
   letter-spacing: 2px;
-  color: #f5e6d0; /* Light cream — visible on dark granite */
+  color: var(--color-text);
   cursor: pointer;
-  display: inline-block;
-  position: relative;
-  top: 4px; /* Nudge down to visually align with links */
+  display: inline-flex;
+  align-items: center;
+  align-self: center; /* Properly vertically center within the navbar flex container */
+  gap: 0.6rem;
+  position: static; /* Remove relative positioning that caused the upward shift */
   transition: transform 0.3s ease, color 0.3s ease;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+}
+
+.logo-globe {
+  width: 1.4rem;
+  height: 1.4rem;
+  flex-shrink: 0;
+  opacity: 0.9;
+  /* No animation */
 }
 
 .logo:hover {
@@ -74,14 +81,13 @@ body::before {
 }
 
 .nav-links a {
-  color: #f5e6d0; /* Light cream — visible on dark granite */
+  color: var(--color-text); /* Back to normal dark text */
   text-decoration: none;
   margin-left: 2rem;
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: color 0.3s ease;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 .nav-links a:hover {
