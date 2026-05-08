@@ -404,6 +404,36 @@ body::before {
   transform: none;
 }
 
+/* Global Reach Section */
+.global-reach {
+  padding: 6rem 5%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.reach-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.destinations {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.destinations .dot {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+}
+
 /* Decorative Border */
 .decorative-border {
   width: 100%;
@@ -559,5 +589,16 @@ body::before {
   .btn-cart {
     padding: 0.4rem 0.8rem;
     font-size: 0.7rem;
+  }
+
+  /* Glowing Buttons on Mobile */
+  @keyframes mobileGlow {
+    0% { box-shadow: 0 0 5px rgba(192, 57, 43, 0.2); }
+    50% { box-shadow: 0 0 20px rgba(192, 57, 43, 0.8); }
+    100% { box-shadow: 0 0 5px rgba(192, 57, 43, 0.2); }
+  }
+
+  .btn-primary, .btn-cart, .form-btn {
+    animation: mobileGlow 2s infinite ease-in-out;
   }
 }
