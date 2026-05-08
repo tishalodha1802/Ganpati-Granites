@@ -125,8 +125,8 @@ body::before {
   line-height: 1.1;
   margin-bottom: 1.5rem;
   font-weight: 400;
-  color: #a67c52; /* Lighter, elegant golden-brown */
-  text-shadow: 0 2px 15px rgba(252, 246, 235, 0.6); /* Glow to ensure it stands out over dark granites */
+  color: #ffffff;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
 .word-wrapper {
@@ -142,7 +142,8 @@ body::before {
 
 .hero-subtitle {
   font-size: 1.2rem;
-  color: var(--color-text-muted);
+  color: #1a1a1a;
+  text-shadow: none;
   margin-bottom: 2.5rem;
   opacity: 0; /* For GSAP */
   transform: translateY(30px);
