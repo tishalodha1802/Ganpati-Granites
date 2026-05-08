@@ -449,11 +449,13 @@ body::before {
 /* Responsive */
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 2.8rem;
+    font-size: 2rem; /* Made even smaller for mobile */
+    margin-bottom: 1rem;
   }
   
   .hero-subtitle {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
   }
 
   .webgl-container {

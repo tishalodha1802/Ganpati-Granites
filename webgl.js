@@ -14,7 +14,12 @@ export function initWebGL() {
     0.1,
     100
   );
-  camera.position.z = 7; // Moved back slightly to fit 3 slabs
+  
+  // Make the animation smaller on mobile by moving the camera back
+  const setCameraZ = () => {
+    camera.position.z = window.innerWidth <= 768 ? 12 : 7;
+  };
+  setCameraZ();
 
   // Renderer setup
   const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
@@ -147,6 +152,7 @@ export function initWebGL() {
   // Resize handler
   window.addEventListener('resize', () => {
     camera.aspect = container.clientWidth / container.clientHeight;
+    setCameraZ(); // Update camera distance if switching between mobile/desktop
     camera.updateProjectionMatrix();
     renderer.setSize(container.clientWidth, container.clientHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
