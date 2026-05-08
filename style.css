@@ -448,6 +448,10 @@ body::before {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .hero-content {
+    margin-top: 15rem; /* Push "Timeless Elegance" lower */
+  }
+
   .hero-title {
     font-size: 2rem; /* Made even smaller for mobile */
     margin-bottom: 1rem;
@@ -460,11 +464,30 @@ body::before {
 
   .webgl-container {
     width: 100%;
-    opacity: 0.3; /* Fade out behind text on small screens */
+    opacity: 1; /* Make 3D fully visible as requested */
+    z-index: 0; /* Ensure text stays on top */
   }
   
+  .navbar {
+    flex-direction: column;
+    padding: 1rem 5%;
+    gap: 0.5rem;
+  }
+
   .nav-links {
-    display: none; /* simple hidden for mobile for now */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+    font-size: 0.7rem;
+  }
+
+  .btn-primary {
+    padding: 0.3rem 0.8rem;
   }
 
   .about-container {
@@ -501,6 +524,24 @@ body::before {
   }
 
   .gallery {
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr); /* Force 2 items in a row */
+    gap: 1rem;
+  }
+
+  .gallery-item .image-wrapper {
+    height: 200px; /* Make images shorter to fit 2-column layout */
+  }
+
+  .gallery-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .gallery-item p {
+    font-size: 0.8rem;
+  }
+
+  .btn-cart {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.7rem;
   }
 }
