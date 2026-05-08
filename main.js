@@ -9,6 +9,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // Init 3D Scene
   initWebGL();
 
+  // Navbar Entrance Animation
+  gsap.from('.logo', { y: -30, opacity: 0, duration: 1, ease: 'power3.out', delay: 0.1 });
+  gsap.from('.nav-links a, .nav-links .btn-primary', {
+    y: -20,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.1,
+    ease: 'power2.out',
+    delay: 0.3
+  });
+
   // Hero Animations (Advanced Stagger Text Reveal)
   const heroTimeline = gsap.timeline({ defaults: { ease: 'power4.out' } });
 

@@ -56,6 +56,14 @@ body::before {
   font-size: 1.5rem;
   letter-spacing: 2px;
   color: var(--color-text);
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.logo:hover {
+  color: var(--color-accent);
+  transform: scale(1.05); /* Subtle scale up on hover */
 }
 
 .nav-links a {
@@ -102,6 +110,9 @@ body::before {
   font-size: 5rem;
   line-height: 1.1;
   margin-bottom: 1.5rem;
+  font-weight: 400;
+  color: #a67c52; /* Lighter, elegant golden-brown */
+  text-shadow: 0 2px 15px rgba(252, 246, 235, 0.6); /* Glow to ensure it stands out over dark granites */
 }
 
 .word-wrapper {
@@ -479,6 +490,11 @@ body::before {
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.8rem;
+  }
+
+  .nav-links a[href="#showcase"],
+  .nav-links a[href="#enquiry"] {
+    display: none; /* Hide Inspiration and Enquiry on mobile */
   }
 
   .nav-links a {
