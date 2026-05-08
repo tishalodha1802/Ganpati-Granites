@@ -47,21 +47,25 @@ body::before {
   align-items: center;
   padding: 1.5rem 5%;
   z-index: 100;
-  background: rgba(252, 246, 235, 0.9); /* Match warm bg */
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(44, 27, 24, 0.1);
+  /* Fully visible granite texture with just a very light dark overlay for readability */
+  background-image: linear-gradient(rgba(20, 10, 8, 0.45), rgba(20, 10, 8, 0.45)), url('/rajasthan_heritage.png');
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
   font-family: var(--font-heading);
   font-size: 1.5rem;
   letter-spacing: 2px;
-  color: var(--color-text);
+  color: #f5e6d0; /* Light cream — visible on dark granite */
   cursor: pointer;
   display: inline-block;
   position: relative;
   top: 4px; /* Nudge down to visually align with links */
   transition: transform 0.3s ease, color 0.3s ease;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
 }
 
 .logo:hover {
@@ -70,13 +74,14 @@ body::before {
 }
 
 .nav-links a {
-  color: var(--color-text);
+  color: #f5e6d0; /* Light cream — visible on dark granite */
   text-decoration: none;
   margin-left: 2rem;
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: color 0.3s ease;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 .nav-links a:hover {
